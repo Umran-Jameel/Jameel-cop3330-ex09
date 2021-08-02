@@ -12,11 +12,23 @@ public class Exercise9 {
 
         System.out.print("What is the length? ");
         String length = in.nextLine();
-        int len = Integer.parseInt(length);
+        int len = 0;
+        try {
+            len = Integer.parseInt(length);
+        } catch (NumberFormatException e) {
+            System.out.println("Please enter a numeric value!");
+            System.exit(0);
+        }
 
         System.out.print("What is the width? ");
         String width = in.nextLine();
-        int wid = Integer.parseInt(width);
+        int wid = 0;
+        try {
+            wid = Integer.parseInt(width);
+        } catch (NumberFormatException e) {
+            System.out.println("Please enter a numeric value!");
+            System.exit(0);
+        }
 
         int perGal = 350;
         int sqFeet = len * wid;
